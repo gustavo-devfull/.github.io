@@ -199,6 +199,12 @@ a:hover {
     font-size: 40px;
 
 }
+.menu-itens a:hover {
+    color: #0e41d8;
+    transition: 400ms ease-in-out 0;  
+    filter:blur(1px)
+
+}
 
 /* Animação Menu */
 #toggle:checked + .checkbox .trace:nth-child(1) {
