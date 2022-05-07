@@ -43,13 +43,33 @@ main {
 } */
 
 h1 {
-    letter-spacing: 4px;
     margin: 0;
+    letter-spacing: 4px;
+
 }
 
 h2 {
     font-size: 1rem;
-    letter-spacing: 4px;
+}
+
+.botao-projetos {
+    margin-top: 1rem;
+    display: flex;
+    z-index: 999;
+    }
+.botao-projetos a {
+    text-decoration: none;
+    color: rgb(61, 61, 61);
+    font-size: 1.2rem;
+    padding: 1rem 4rem;
+    border: 1px solid rgb(0, 0, 0);
+    min-width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s cubic-bezier(0.55, 0.025, 0.675, 0.97);
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .social-media {
@@ -176,7 +196,6 @@ a:hover {
     color: #050e2a;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 4px;
     font-size: 40px;
 
 }
@@ -235,7 +254,24 @@ a:hover {
     justify-content: space-evenly;
     width: 90%;
 }
-
+.card-jogo1 {
+    height: 300px;
+    width: 400px;
+    margin: 3rem 0 0 0;
+    background-color: #050e2a;
+    background-image: url('./gamememory.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(0.8);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+}
 .card {
     height: 300px;
     width: 400px;
@@ -258,7 +294,6 @@ a:hover {
 .card-text {
     width: 40%;
     font-family: sans-serif;
-    letter-spacing: 1px;
     color: rgb(109, 109, 109);
 }
 
@@ -285,7 +320,6 @@ a:hover {
 
 .card-wrapper h2 {
     font-size: 40px;
-    letter-spacing: 4px;
     margin: 0;
     transition: 0.3s;
 }
@@ -298,11 +332,19 @@ a:hover {
     text-transform: uppercase;
     transition: 0.3s;
 }
-
 .card:hover {
     filter: unset;
 }
 
+.card-jogo1:hover {
+    filter: unset;
+}
+
+.card-jogo1:hover > .card-wrapper::before {
+    height: 250px;
+    width: 350px;
+    opacity: 1;
+}
 .card:hover > .card-wrapper::before {
     height: 250px;
     width: 350px;
@@ -310,6 +352,12 @@ a:hover {
 }
 
 .card:hover > .card-wrapper p {
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;
+}
+
+.card-jogo1:hover > .card-wrapper p {
     opacity: 1;
     visibility: visible;
     font-size: 14px;
